@@ -1,0 +1,21 @@
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
+
+public class ImpiantoSciistico {
+
+    // Capacità delle piste
+    public static final int MAX_SCIATORI_PISTA_1 = 2;
+    public static final int MAX_SCIATORI_PISTA_2 = 1;
+    public static final int MAX_SCIATORI_PISTA_3 = 3;
+
+    // Capacità della seggiovia
+    public static final int CAPACITA_SEGGIOVIA = 2;
+
+    // Semafori per gestire le piste
+    public static Semaphore pista1 = new Semaphore(MAX_SCIATORI_PISTA_1);
+    public static Semaphore pista2 = new Semaphore(MAX_SCIATORI_PISTA_2);
+    public static Semaphore pista3 = new Semaphore(MAX_SCIATORI_PISTA_3);
+
+    // Semaforo per la seggiovia
+    public static Semaphore seggiovia = new Semaphore(CAPACITA_SEGGIOVIA);
+}
